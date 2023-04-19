@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h2 class=" text-center h1 text-color">
+    Find & track the best   <span class="text-color-2">free-to-play</span> games!
+  </h2>
+  <p class="text-center text-muted ">Track what you've played and search for what to play next! Plus get free premium loot!</p>
+  <button (click)="All()" class="d-block mx-auto text-muted h5 btn py-2 px-3 btn-style">Browse Games</button>
+</div>
+<div class="container">
+  <div class=" row">
+    <h4 class=" my-4 text-color"> <i class="fas fa-robot mr-2"></i> Personalized Recommendations</h4>
+  <div *ngFor="let product of allgame" class="col-md-4 div coursor">
+    <div class="product  my-4 shadow" >
+      <a [routerLink]="['/gamedetails',product.id]" class="all-unset">
+  <img  class=" card-img" src="{{product.thumbnail}}" alt="">
+
+  <div class=" d-flex align-items-center seconde-color p-2 justify-content-between">
+
+
+
+      <span class="text-main text-color mx-2 seconde-color card-title fw-bold font-sm p-2">{{product.title}}</span>
+      <span class=" fw-bold  p-2 mx-2 badge-1 badge text-white">free</span>
+
+
+      </div>
+
+  </a>
+
+    </div>
+
+  </div>
+  </div>
+</div>
+

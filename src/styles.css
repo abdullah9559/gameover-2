@@ -1,0 +1,82 @@
+
+.main-color
+{
+  background-color: #272b30;
+}
+.seconde-color{
+  background-color: #32383e;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Cedarville+Cursive&family=Montserrat:wght@100&family=Poppins&family=Xanh+Mono:ital@1&display=swap');
+.text-nav{
+  font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Cedarville Cursive', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Xanh Mono', monospace;
+}
+.all-unset-2{
+  all: unset;
+}
+.text-color{
+  color: #AAAAAA !important;
+
+}
+.text-color-2{
+  color: #4799eb;
+}
+.text-color-3{
+  color: #0169BE;
+}
+.text-shadow{
+
+    text-shadow: 2px 3px rgb(12, 12, 12);
+
+}
+body{
+  background-color: #272b30;
+}
+.btn-style{
+background-color: unset;
+
+border-radius: 8px;
+border-color:    #AAAAAA;
+}
+.btn-style:hover{
+  background-color: #AAAAAA ;
+  color: white !important;
+}
+.btn-color{
+  background-color: #4799eb;
+
+}
+.btn-color:hover{
+color:  #4799eb !important;
+border-color:  #4799eb;
+}
+.btn-color-2
+{
+  color:  #4799eb !important;
+  border-color:  #4799eb;
+  }
+  .btn-color-2:hover{
+    color: white !important;
+    border-color:  #4799eb;
+    }
+    .btn-style-join:enabled{
+background-color:#0169BE;
+       color: white ;
+    }
+    .Active{
+      color: white !important;
+    }
+    .img-join{
+     margin-left: -20px;
+    }
+.coursor{
+  cursor: pointer;
+}
+.div:hover{
+transform: scale(1.02);
+transition: 0.2s all;
+}

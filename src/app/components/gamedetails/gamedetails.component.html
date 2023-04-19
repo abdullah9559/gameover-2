@@ -1,0 +1,57 @@
+
+
+  <section style="background-image:url(https://www.freetogame.com/g/{{ProductDetails?.id}}/background.webp);    background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-position: top; "  >
+  <div class="layer ">
+    <div class="container">
+
+      <div class="row   ">
+        <div class="col-md-4 pt-5 " >
+<div class="  " >
+  <video  muted autoplay loop width="355" height="200" class=" position-absolute " src="https://www.freetogame.com/g/{{ProductDetails?.id}}/videoplayback.webm" ></video>
+</div>
+<div class="">
+  <img   class=" w-100  rounded-1 coursor z-h position-relative  " src="{{ProductDetails?.thumbnail}}" alt="">
+</div>
+
+
+          <a type="submit" [href]= "ProductDetails?.game_url" class="" target="_blank">   <button class="btn btn-color text-white  w-100 my-1  text-center fw-bolder"> Play Now   <i class="fas fa-sign-out-alt"></i></button></a>
+        </div>
+        <div class="col-md-8  pt-5">
+
+          <h2 class="fw-bolder text-color my-4 ">{{ProductDetails?.title}}</h2>
+          <div class="row  ">
+            <p class="text-muted mx-1">       <span class="text-color-2">Category : </span>{{ProductDetails?.genre}} </p>
+            <p class="text-muted mx-1">       <span class="text-color-2">Platform : </span>{{ProductDetails?.platform}} </p>
+            <p class="text-muted mx-1">       <span class="text-color-2">Status : </span>{{ProductDetails?.status}} </p>
+          </div>
+          <p class="text-color mb-0 my-5">About : </p>
+          <p class="text-muted mx-1 ">{{ProductDetails?.description|slice:0:1500}}...</p>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+
+
+    <div class="container container-2 col-8 me-0 ">
+      <p class="text-secondary h4 mb-4">{{ProductDetails?.title}} Screenshots</p>
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let img of ProductDetails?.screenshots">
+          <ng-template carouselSlide >
+            <img  [src]="img?.image"  >
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+    </div>
+  </section>
+
+

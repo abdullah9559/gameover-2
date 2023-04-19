@@ -1,0 +1,35 @@
+<div class="container shadow rounded-1 row seconde-color my-5  mx-auto">
+  <div class="col-6 gx-2 ">
+    <img src="./assets/gaming.ebaf2ffc84f4451d.jpg" class="img-join w-100 h-100 " alt="">
+      </div>
+<div class=" col-5 gx-1 mx-auto py-1" >
+  <img src="./assets/logo.png" alt="" class="d-block mx-auto pb-2 p-3 img-ll  " width="130px">
+  <h4 class="text-color  pb-3  text-center ">Log in to GameOver</h4>
+  <div *ngIf="apiError" class="alert alert-danger">
+{{apiError}}
+  </div>
+  <form  [formGroup]="loginForm" (ngSubmit)="handleLogin(loginForm)">
+
+
+    <input formControlName="email"placeholder="Email Address :" type="email" class="bg-dark border-0 text-color form-control mb-3" id="email">
+<div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched " class="alert alert-danger text-center  p-0">
+  <p *ngIf="loginForm.get('email')?.getError('email')" class="m-0">Email is invalid</p>
+  <p *ngIf="loginForm.get('email')?.getError('required')" class="m-0">Email is Required</p>
+  </div>
+
+  <input formControlName="password"placeholder="Password :" type="password" class="form-control bg-dark border-0 my-4 text-color  mb-2" id="password">
+<div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched " class="alert alert-danger  p-0 text-center">
+  <p *ngIf="loginForm.get('password')?.getError('pattern')" class="m-0">password is must start with upperCase then from 3 to 10 </p>
+  <p *ngIf="loginForm.get('password')?.getError('required')" class="m-0">password is Required</p>
+  </div>
+
+
+<button [disabled]="loginForm.invalid" type="submit" class="d-block mx-auto text-white h5 btn my-4 py-2  px-3  w-100 btn-style-join">
+  <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+  <span *ngIf="!isLoading" class="">Login</span>
+</button>
+  </form>
+  <hr class="text-color w-75 mx-auto">
+  <p class="text-color text-center">Not a member yet ? <a class="all-unset-2 text-color-2 coursor" routerLink="/join">Creat Account ></a></p>
+</div>
+
